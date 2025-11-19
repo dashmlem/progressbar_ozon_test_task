@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Progress bar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="website">
+      <div class="title">
+        <h2>Progress</h2>
+      </div>
+      <main class="card">
+        <div class="progress">
+          <div class="outer">
+            <div class="inner">
+              <div id="number">60%</div>
+            </div>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="160px"
+            height="160px"
+          >
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+          </svg>
+        </div>
+        <section class="controls">
+          <label class="value">
+            <input id="valueInput" type="number" min="0" max="100" value="60" />
+            <span>Value</span>
+          </label>
+          <label class="row">
+            <div class="toggle-container">
+              <input
+                type="checkbox"
+                id="animateToggle"
+                class="toggle-checkbox"
+              />
+              <label for="animateToggle" class="toggle-button"></label>
+            </div>
+            <span>Animate</span>
+          </label>
+          <label class="hiddenPanel">
+            <div class="toggle-container">
+              <input type="checkbox" id="hideToggle" class="toggle-checkbox" />
+              <label for="hideToggle" class="toggle-button"></label>
+            </div>
+            <span>Hide</span>
+          </label>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
