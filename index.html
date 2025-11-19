@@ -14,9 +14,7 @@
       <main class="card">
         <div class="progress">
           <div class="outer">
-            <div class="inner">
-              <div id="number">60%</div>
-            </div>
+            <div class="inner"></div>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +22,22 @@
             width="160px"
             height="160px"
           >
-            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+            <!-- Серый фон круга -->
+            <circle
+              class="progress-background"
+              cx="80"
+              cy="80"
+              r="70"
+              stroke-linecap="round"
+            />
+            <!-- Цветной прогресс-бар -->
+            <circle
+              class="progress-bar"
+              cx="80"
+              cy="80"
+              r="70"
+              stroke-linecap="butt"
+            />
           </svg>
         </div>
         <section class="controls">
