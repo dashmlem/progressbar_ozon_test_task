@@ -8,9 +8,9 @@ body {
   width: 100%;
   margin: 0 auto;
   font-family: Inter, Roboto, Arial;
-  color: #102028;
+  color: #030303;
   display: flex;
-  background: white;
+  background: #fefefe;
 }
 .title {
   width: 100%;
@@ -46,7 +46,7 @@ body {
 /* Серый фон круга */
 .progress-background {
   fill: none;
-  stroke: #d2d2d2;
+  stroke: #eef3f5;
   stroke-width: 20px;
   stroke-dasharray: 440;
   stroke-dashoffset: 0;
@@ -59,7 +59,7 @@ body {
   stroke: var(--ozon);
   stroke-width: 20px;
   stroke-dasharray: 440; /* Длина штриха и пробела (2πr = 2*3.14*70) */
-  stroke-dashoffset: 264; /* Начальное смещение (60% от 440) */
+  stroke-dashoffset: 264;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   transition: stroke-dashoffset 0.5s ease;
@@ -79,16 +79,13 @@ body {
   align-items: center;
   justify-content: center;
 }
-#number {
-  font-weight: 600;
-  color: #555;
-}
+
 circle {
   fill: none;
   stroke: var(--ozon);
   stroke-width: 20px;
-  stroke-dasharray: 440; /* Длина штриха и пробела (2πr = 2*3.14*70) */
-  stroke-dashoffset: 264; /* Начальное смещение (60% от 440) */
+  stroke-dasharray: 440;
+  stroke-dashoffset: 264;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   transition: stroke-dashoffset 0.5s ease;
@@ -97,7 +94,9 @@ svg {
   position: absolute;
   top: 0;
   left: 0;
+  transform-origin: 50% 50%;
 }
+
 .toggle-container {
   display: flex;
   align-items: center;
@@ -109,8 +108,8 @@ svg {
 }
 
 .toggle-button {
-  background-color: #d2d2d2;
-  width: 60px;
+  background-color: #dfe6ee;
+  width: 46px;
   height: 30px;
   border-radius: 30px;
   cursor: pointer;
@@ -121,11 +120,11 @@ svg {
 .toggle-button::before {
   position: absolute;
   content: "";
-  background-color: white;
-  width: 26px;
-  height: 26px;
+  background-color: #fefefe;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  margin: 2px;
+  margin: 3px;
   transition: 0.2s;
 }
 
@@ -142,10 +141,9 @@ svg {
     stroke-dashoffset: 0;
   }
 }
-/* Добавьте эту анимацию в ваш CSS */
 @keyframes rotateAnimation {
   0% {
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(270deg);
