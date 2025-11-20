@@ -68,7 +68,6 @@ body {
   height: 160px;
   width: 160px;
   border-radius: 50%;
-
   padding: 20px;
 }
 .inner {
@@ -136,17 +135,12 @@ svg {
   transform: translateX(30px);
 }
 
-@keyframes anim {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
 @keyframes rotateAnimation {
   0% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(270deg);
+    transform: rotate(360deg);
   }
 }
 
