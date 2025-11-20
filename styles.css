@@ -7,13 +7,13 @@ body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  font-family: "Roboto", Inter, Arial, sans-serif;
+  font-family: "Outfit", sans-serif; // Шрифт Mona Sans тоже был похож, но, сравнив с макетом, я остановилась на этом
   font-style: normal;
   color: #030303;
   display: flex;
-  font-weight: 600;
+  font-weight: 500;
   background: #fefefe;
-  font-size: 14px;
+  font-size: 15px;
 }
 .title {
   width: 100%;
@@ -22,8 +22,8 @@ body {
 .title h2 {
   text-align: left;
   margin-bottom: 20px;
-  font-size: 14.5px;
-
+  font-size: 15px;
+  font-weight: 600;
   margin-top: 4px;
   margin-left: 2px;
 }
@@ -33,7 +33,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-
   padding-right: 18px;
   padding-left: 17px;
   padding-bottom: 18px;
@@ -41,24 +40,24 @@ body {
 .card {
   display: flex;
   flex-direction: row;
-  gap: 45px;
+  gap: 70px;
   align-items: center;
   margin: 0 auto;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .progress {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   position: relative;
 }
 /* Серый фон круга */
 .progress-background {
   fill: none;
   stroke: #eef3f5;
-  stroke-width: 20px;
-  stroke-dasharray: 440;
+  stroke-width: 8px;
+  stroke-dasharray: 352;
   stroke-dashoffset: 0;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
@@ -67,22 +66,22 @@ body {
 .progress-bar {
   fill: none;
   stroke: var(--ozon);
-  stroke-width: 20px;
-  stroke-dasharray: 440; /* Длина штриха и пробела (2πr = 2*3.14*70) */
-  stroke-dashoffset: 264;
+  stroke-width: 8px;
+  stroke-dasharray: 352;
+  stroke-dashoffset: 141;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   transition: stroke-dashoffset 0.5s ease;
 }
 .outer {
-  height: 160px;
-  width: 160px;
-  border-radius: 50%;
-  padding: 20px;
-}
-.inner {
   height: 120px;
   width: 120px;
+  border-radius: 50%;
+  padding: 15px;
+}
+.inner {
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -92,9 +91,9 @@ body {
 circle {
   fill: none;
   stroke: var(--ozon);
-  stroke-width: 20px;
-  stroke-dasharray: 440;
-  stroke-dashoffset: 264;
+  stroke-width: 8px;
+  stroke-dasharray: 352;
+  stroke-dashoffset: 141;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   transition: stroke-dashoffset 0.5s ease;
@@ -130,10 +129,10 @@ svg {
   position: absolute;
   content: "";
   background-color: #fefefe;
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
-  margin: 3px;
+  margin: 2.5px;
   transition: 0.2s;
 }
 
@@ -142,7 +141,7 @@ svg {
 }
 
 .toggle-checkbox:checked + .toggle-button::before {
-  transform: translateX(30px);
+  transform: translateX(18px);
 }
 
 @keyframes rotateAnimation {
@@ -168,7 +167,7 @@ svg {
 .controls {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 14px;
 }
 .value,
 .row,
@@ -189,14 +188,13 @@ svg {
   }
   .controls {
     flex-direction: column;
-    gap: 14px;
+    gap: 13px;
   }
 
   .value,
   .row,
   .hiddenPanel {
     flex-direction: row;
-
     gap: 22px;
   }
 

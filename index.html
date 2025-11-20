@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <title>Progress bar</title>
@@ -23,30 +25,30 @@
           <svg
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
-            width="160px"
-            height="160px"
+            width="120px"
+            height="120px"
           >
             <!-- Серый фон круга -->
             <circle
               class="progress-background"
-              cx="80"
-              cy="80"
-              r="70"
+              cx="60"
+              cy="60"
+              r="56"
               stroke-linecap="round"
             />
             <!-- Цветной прогресс-бар -->
             <circle
               class="progress-bar"
-              cx="80"
-              cy="80"
-              r="70"
+              cx="60"
+              cy="60"
+              r="56"
               stroke-linecap="butt"
             />
           </svg>
         </div>
         <section class="controls">
           <label class="value">
-            <input id="valueInput" type="number" min="0" max="100" value="60" />
+            <input id="valueInput" type="number" min="0" max="100" />
             <span>Value</span>
           </label>
           <label class="row">

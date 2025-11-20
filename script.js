@@ -5,8 +5,8 @@ const animateToggle = document.getElementById("animateToggle");
 const svgElement = document.querySelector("svg");
 const progressBar = document.querySelector(".progress-bar");
 
-const circumference = 440; //длина окружности
-const startValue = 0; // стартовое значение прогресса
+const circumference = 352;
+const startValue = 0;
 
 updateProgressBar(startValue);
 
@@ -52,20 +52,19 @@ window.ProgressAPI = {
   },
   setHidden: function (hidden) {
     if (hidden) {
-      hiddenPanel.classList.add(".hidden");
+      hiddenPanel.classList.add("hidden");
     } else {
-      hiddenPanel.classList.remove(".hidden");
+      hiddenPanel.classList.remove("hidden");
     }
   },
   getState: function () {
     return {
       value: parseInt(valueInput.value),
       animated: animateToggle.checked,
-      hidden: hiddenPanel.classlist.contains("hidden"),
+      hidden: hiddenPanel.classList.contains("hidden"),
     };
   },
 };
-
 //Примеры управления api
 //ProgressAPI.setValue(75);
 // или window.ProgressAPI.setAnimation(true);
