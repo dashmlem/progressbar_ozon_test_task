@@ -2,21 +2,22 @@ const hiddenPanel = document.querySelector(".progress");
 const hideToggle = document.querySelector("#hideToggle");
 const valueInput = document.getElementById("valueInput");
 const animateToggle = document.getElementById("animateToggle");
-
 const svgElement = document.querySelector("svg");
 const progressBar = document.querySelector(".progress-bar");
 
-const circumference = 440;
-const startValue = 0;
+const circumference = 440; //длина окружности
+const startValue = 0; // стартовое значение прогресса
 
 updateProgressBar(startValue);
 
+// Проверяем, входит ли в диапазон 0-100 введённое число и обновляем значение если да
 valueInput.addEventListener("input", () => {
   const value = parseInt(valueInput.value);
   if (value >= 0 && value <= 100) {
     updateProgressBar(value);
   }
 });
+//Добавляем анимацию при нажатии
 animateToggle.addEventListener("change", () => {
   if (animateToggle.checked) {
     svgElement.style.animation = "rotateAnimation 2s linear infinite";
@@ -24,18 +25,18 @@ animateToggle.addEventListener("change", () => {
     svgElement.style.animation = "none";
   }
 });
+//При клике скрываем панель
 hideToggle.addEventListener("click", () => {
   hiddenPanel.classList.toggle("hidden");
 });
 
+//Вычисляем по формуле значения для синего индикатора прогресса
 function updateProgressBar(value) {
   const offset = circumference - (value / 100) * circumference;
   progressBar.style.strokeDashoffset = offset;
-
   valueInput.value = value;
 }
-//API
-
+//API для управления кнопочками
 window.ProgressAPI = {
   setValue: function (value) {
     if (value >= 0 && value <= 100) {
@@ -64,3 +65,8 @@ window.ProgressAPI = {
     };
   },
 };
+
+//Примеры управления api
+//ProgressAPI.setValue(75);
+// или window.ProgressAPI.setAnimation(true);
+//ProgressAPI.setHidden(true);;
