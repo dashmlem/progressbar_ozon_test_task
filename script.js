@@ -15,8 +15,6 @@ valueInput.addEventListener("input", () => {
   const value = parseInt(valueInput.value);
   if (value >= 0 && value <= 100) {
     updateProgressBar(value);
-  } else {
-    alert("Введите число от 0 до 100!");
   }
 });
 animateToggle.addEventListener("change", () => {
