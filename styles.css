@@ -7,11 +7,13 @@ body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  font-family: Inter, Roboto, Arial;
+  font-family: "Roboto", Inter, Arial, sans-serif;
+  font-style: normal;
   color: #030303;
   display: flex;
-  font-weight: 600; // подобрать шрифт и сделать нормальный font-weight
+  font-weight: 600;
   background: #fefefe;
+  font-size: 14px;
 }
 .title {
   width: 100%;
@@ -22,7 +24,7 @@ body {
   margin-bottom: 20px;
   font-size: 14.5px;
 
-  margin-top: 3px;
+  margin-top: 4px;
   margin-left: 2px;
 }
 
@@ -39,7 +41,7 @@ body {
 .card {
   display: flex;
   flex-direction: row;
-  gap: 80px;
+  gap: 45px;
   align-items: center;
   margin: 0 auto;
   padding: 20px;
@@ -107,7 +109,7 @@ svg {
 .toggle-container {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .toggle-checkbox {
@@ -117,7 +119,7 @@ svg {
 .toggle-button {
   background-color: #dfe6ee;
   width: 46px;
-  height: 30px;
+  height: 28px;
   border-radius: 30px;
   cursor: pointer;
   position: relative;
@@ -128,8 +130,8 @@ svg {
   position: absolute;
   content: "";
   background-color: #fefefe;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   margin: 3px;
   transition: 0.2s;
@@ -153,11 +155,11 @@ svg {
 }
 
 #valueInput {
-  border: 1px solid black;
+  border: 1.5px solid black;
   border-radius: 300px;
-  width: 54px;
+  width: 43px;
   text-align: center;
-  height: 35px;
+  height: 27.5px;
   font-size: 17px;
 }
 .hidden {
@@ -166,7 +168,7 @@ svg {
 .controls {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 17px;
 }
 .value,
 .row,
@@ -174,18 +176,20 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  gap: 15px;
+  width: 80%;
+  gap: 20px;
 }
 @media (max-width: 360px) {
   .card {
     flex-direction: column;
-    gap: 30px;
+    gap: 75px;
   }
-
+  #valueInput {
+    width: 46px;
+  }
   .controls {
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
   }
 
   .value,
@@ -193,7 +197,7 @@ svg {
   .hiddenPanel {
     flex-direction: row;
 
-    gap: 10px;
+    gap: 22px;
   }
 
   .toggle-container {
