@@ -2,12 +2,13 @@
   box-sizing: border-box;
   --ozon: #2659f5;
 }
+
 html,
 body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-  font-family: "Outfit", sans-serif; // Шрифт Mona Sans тоже был похож, но, сравнив с макетом, я остановилась на этом
+  font-family: "Outfit", sans-serif;
   font-style: normal;
   color: #030303;
   display: flex;
@@ -15,6 +16,7 @@ body {
   background: #fefefe;
   font-size: 15px;
 }
+
 .title {
   width: 100%;
 }
@@ -37,6 +39,7 @@ body {
   padding-left: 17px;
   padding-bottom: 18px;
 }
+
 .card {
   display: flex;
   flex-direction: row;
@@ -48,16 +51,17 @@ body {
 }
 
 .progress {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   position: relative;
 }
+
 /* Серый фон круга */
 .progress-background {
   fill: none;
   stroke: #eef3f5;
-  stroke-width: 8px;
-  stroke-dasharray: 352;
+  stroke-width: 10px;
+  stroke-dasharray: 364;
   stroke-dashoffset: 0;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
@@ -66,19 +70,21 @@ body {
 .progress-bar {
   fill: none;
   stroke: var(--ozon);
-  stroke-width: 8px;
-  stroke-dasharray: 352;
-  stroke-dashoffset: 141;
+  stroke-width: 10px;
+  stroke-dasharray: 364;
+  stroke-dashoffset: 364;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   transition: stroke-dashoffset 0.5s ease;
 }
+
 .outer {
-  height: 120px;
-  width: 120px;
+  height: 130px;
+  width: 130px;
   border-radius: 50%;
-  padding: 15px;
+  padding: 20px;
 }
+
 .inner {
   height: 90px;
   width: 90px;
@@ -91,13 +97,14 @@ body {
 circle {
   fill: none;
   stroke: var(--ozon);
-  stroke-width: 8px;
-  stroke-dasharray: 352;
-  stroke-dashoffset: 141;
+  stroke-width: 10px;
+  stroke-dasharray: 364;
+  stroke-dashoffset: 364;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   transition: stroke-dashoffset 0.5s ease;
 }
+
 svg {
   position: absolute;
   top: 0;
@@ -161,14 +168,17 @@ svg {
   height: 27.5px;
   font-size: 17px;
 }
+
 .hidden {
   visibility: hidden;
 }
+
 .controls {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
+
 .value,
 .row,
 .hiddenPanel {
@@ -178,14 +188,17 @@ svg {
   width: 80%;
   gap: 20px;
 }
+
 @media (max-width: 360px) {
   .card {
     flex-direction: column;
     gap: 75px;
   }
+
   #valueInput {
     width: 46px;
   }
+
   .controls {
     flex-direction: column;
     gap: 13px;
